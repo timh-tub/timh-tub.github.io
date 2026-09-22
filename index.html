@@ -1,65 +1,90 @@
 <!doctype html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dein Name – Portfolio</title>
-  <meta name="description" content="Portfolio von Dein Name">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="hero">
-    <nav>
-      <a class="logo" href="/">Dein Name</a>
-      <div>
-        <a href="#projekte">Projekte</a>
-        <a href="#ueber-mich">Über mich</a>
-        <a href="#kontakt">Kontakt</a>
-      </div>
-    </nav>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tim H. – Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio von Tim H. – Frontend-Entwicklung, Produktdesign und digitale Lösungen."
+    >
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <nav class="topbar" aria-label="Hauptnavigation">
+            <a class="brand" href="#top"><span class="brand-mark">Y</span><span data-i18n="brand">Your Company</span></a>
+            <div class="nav-actions">
+              <div class="nav-links">
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
+              </div>
+              <button class="lang-toggle" id="langToggle" type="button" aria-label="Sprache wechseln">DE / EN</button>
+            </div>
+          </nav>
+        </header>
 
-    <div class="hero-content">
-      <p class="eyebrow">Informatikstudent und Entwickler</p>
-      <h1>Ich entwickle nützliche Software.</h1>
-      <p>
-        Ich arbeite an Webanwendungen, Automatisierungen und
-        gemeinnützigen Open-Source-Projekten.
-      </p>
-      <a class="button" href="#projekte">Projekte ansehen</a>
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow" data-i18n="hero.eyebrow">Frontend &amp; digitales Produktdesign</p>
+            <h1 data-i18n="hero.title">Klare, durchdachte digitale Erlebnisse.</h1>
+            <p class="intro" data-i18n="hero.intro">
+              Ich gestalte und baue digitale Produkte mit Fokus auf Klarheit,
+              Benutzerführung und ein sauberes, modernes Erscheinungsbild.
+              Dabei liegt der Schwerpunkt auf verständlicher Kommunikation,
+              gutem UX und einer professionellen, nutzerfreundlichen Umsetzung.
+            </p>
+            <div class="cta-row">
+              <a class="button primary" href="#about" data-i18n="hero.primaryButton">Ausgewählte Schwerpunkte</a>
+              <a class="button secondary" href="#contact" data-i18n="hero.secondaryButton">Lass uns reden</a>
+            </div>
+          </div>
+
+          <aside class="hero-panel" aria-label="Kurzprofil">
+            <div class="mini-label" data-i18n="panel.label">Schwerpunkt</div>
+            <p data-i18n="panel.text">Webdesign, Frontend-Umsetzung, digitale Konzepte</p>
+            <div class="mini-grid">
+              <div>
+                <strong>UI</strong>
+                <span data-i18n="panel.ui">Saubere Schnittstellen</span>
+              </div>
+              <div>
+                <strong>UX</strong>
+                <span data-i18n="panel.ux">Klare Erlebnisse</span>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section id="about" class="section-block about-block">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="about.eyebrow">Über mich</p>
+            <h2 data-i18n="about.title">Durchdachte Produktarbeit.</h2>
+          </div>
+
+          <div class="about-grid">
+            <p data-i18n="about.text">
+              Ich kombiniere Design-Sinn mit technischem Verständnis, damit digitale
+              Produkte nicht nur gut aussehen, sondern auch verständlich, schnell und
+              zuverlässig funktionieren.
+            </p>
+            <ul>
+              <li data-i18n="about.item1">Interface Design</li>
+              <li data-i18n="about.item2">Frontend Umsetzung</li>
+              <li data-i18n="about.item3">UX-Denken und Produktklarheit</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer id="contact" class="site-footer">
+        <p data-i18n="footer.text">Verfügbar für freelance und Produktarbeit.</p>
+        <a href="mailto:your@email.com">your@email.com</a>
+      </footer>
     </div>
-  </header>
 
-  <main>
-    <section id="projekte">
-      <h2>Projekte</h2>
-
-      <article class="project">
-        <h3>Projektname</h3>
-        <p>
-          Kurze Beschreibung: Was macht das Projekt und welches Problem löst es?
-        </p>
-        <a href="https://github.com/deinname/projekt">GitHub ansehen</a>
-      </article>
-    </section>
-
-    <section id="ueber-mich">
-      <h2>Über mich</h2>
-      <p>
-        Ich studiere Informatik und interessiere mich für Webentwicklung,
-        Python und Open Source.
-      </p>
-    </section>
-
-    <section id="kontakt">
-      <h2>Kontakt</h2>
-      <p>
-        <a href="mailto:hallo@example.com">hallo@example.com</a>
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 Dein Name</p>
-  </footer>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
