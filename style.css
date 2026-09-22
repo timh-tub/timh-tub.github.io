@@ -321,20 +321,22 @@ h1 {
 }
 
 .site-footer {
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
   margin-top: 3rem;
-  padding-top: 2rem;
+  padding: 4rem 0 1rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  align-items: start;
+  text-align: center;
 }
 
 .contact-left {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  align-items: center;
 }
 
 .contact-email {
@@ -343,10 +345,12 @@ h1 {
 }
 
 .contact-form {
+  width: min(100%, 560px);
   background: linear-gradient(180deg, rgba(11,17,32,0.6), rgba(15,23,42,0.6));
   border: 1px solid var(--line);
-  padding: 1rem;
-  border-radius: 14px;
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: left;
 }
 
 .contact-form h3 {
@@ -389,24 +393,13 @@ h1 {
 }
 
 @media (max-width: 900px) {
-  .site-footer {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-form {
-    margin-top: 1rem;
-  }
-}
-
-@media (max-width: 900px) {
   .hero,
   .project-grid,
   .about-grid {
     grid-template-columns: 1fr;
   }
 
-  .topbar,
-  .site-footer {
+  .topbar {
     flex-direction: column;
     align-items: flex-start;
   }
