@@ -80,8 +80,70 @@
       </main>
 
       <footer id="contact" class="site-footer">
-        <p data-i18n="footer.text">Verfügbar für Freelance und Produktarbeit.</p>
-        <a href="mailto:your@email.com">info@schöneberg-systems.de</a>
+        <div class="contact-left">
+          <p data-i18n="footer.text">
+            Verfügbar für Freelance und Produktarbeit.
+          </p>
+          <a
+            class="contact-email"
+            href="mailto:info@schöneberg-systems.de"
+          >
+            info@schöneberg-systems.de
+          </a>
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <h3>Contact — Request a project</h3>
+
+          <label class="field">
+            <span class="field-label">Name</span>
+            <input
+              type="text"
+              id="contactName"
+              name="name"
+              placeholder="Your name"
+              required
+            >
+          </label>
+
+          <label class="field">
+            <span class="field-label">Email</span>
+            <input
+              type="email"
+              id="contactEmail"
+              name="email"
+              placeholder="you@example.com"
+              required
+            >
+          </label>
+
+          <label class="field">
+            <span class="field-label">Message</span>
+            <textarea
+              id="contactMessage"
+              name="message"
+              rows="5"
+              placeholder="Short description of your project"
+              required
+            ></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="button primary">
+              Send request
+            </button>
+            <button type="reset" class="button secondary">
+              Reset
+            </button>
+          </div>
+
+          <p class="form-note">
+            Or email directly:
+            <a href="mailto:info@schöneberg-systems.de">
+              info@schöneberg-systems.de
+            </a>
+          </p>
+        </form>
       </footer>
     </div>
 
