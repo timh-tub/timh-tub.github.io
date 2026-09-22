@@ -3,11 +3,13 @@ const languageToggle = document.getElementById('langToggle');
 const translations = {
   de: {
     brand: 'Schöneberg Systems',
-    'nav.about': 'About',
-    'nav.contact': 'Contact',
+    'nav.label': 'Hauptnavigation',
+    'panel.ariaLabel': 'Kurzprofil',
+    'nav.about': 'Über mich',
+    'nav.contact': 'Kontakt',
     'hero.eyebrow': 'Frontend & digitales Produktdesign',
-    'hero.title': 'Klare, durchdachte digitale Erlebnisse.',
-    'hero.intro': 'Ich gestalte und baue digitale Produkte mit Fokus auf Klarheit, Benutzerführung und ein sauberes, modernes Erscheinungsbild. Dabei liegt der Schwerpunkt auf verständlicher Kommunikation, gutem UX und einer professionellen, nutzerfreundlichen Umsetzung.',
+    'hero.title': 'Digitale Erlebnisse mit klarer Linie.',
+    'hero.intro': 'Ich entwickle digitale Auftritte und Produkte mit klarer Struktur, guter Nutzerführung und einem zeitgemäßen visuellen Anspruch. Von der ersten Idee bis zur Umsetzung verbinde ich Gestaltung und Technik zu einer stimmigen Lösung.',
     'hero.primaryButton': 'Mehr erfahren',
     'hero.secondaryButton': 'Kontakt',
     'panel.label': 'Schwerpunkt',
@@ -15,15 +17,27 @@ const translations = {
     'panel.ui': 'Saubere Schnittstellen',
     'panel.ux': 'Klare Erlebnisse',
     'about.eyebrow': 'Über mich',
-    'about.title': 'Durchdachte Produktarbeit.',
-    'about.text': 'Ich kombiniere Design-Sinn mit technischem Verständnis, damit digitale Produkte nicht nur gut aussehen, sondern auch verständlich, schnell und zuverlässig funktionieren.',
+    'about.title': 'Design und Technik mit Substanz.',
+    'about.text': 'Ich verbinde Designverständnis mit technischem Know-how, damit digitale Lösungen gut aussehen, verständlich bleiben und zuverlässig funktionieren.',
     'about.item1': 'Interface Design',
     'about.item2': 'Frontend Umsetzung',
     'about.item3': 'UX-Denken und Produktklarheit',
-    'footer.text': 'Verfügbar für freelance und Produktarbeit.'
+    'footer.text': 'Offen für neue Ideen und Anfragen.',
+    'form.title': 'Kontakt aufnehmen',
+    'form.name': 'Name',
+    'form.namePlaceholder': 'Dein Name',
+    'form.email': 'E-Mail',
+    'form.emailPlaceholder': 'du@beispiel.de',
+    'form.message': 'Nachricht',
+    'form.messagePlaceholder': 'Worum geht es?',
+    'form.submit': 'Anfrage senden',
+    'form.reset': 'Zurücksetzen',
+    'form.direct': 'Oder direkt per E-Mail:'
   },
   en: {
     brand: 'Schöneberg Systems',
+    'nav.label': 'Main navigation',
+    'panel.ariaLabel': 'Profile summary',
     'nav.about': 'About',
     'nav.contact': 'Contact',
     'hero.eyebrow': 'Frontend & digital product design',
@@ -41,7 +55,17 @@ const translations = {
     'about.item1': 'Interface design',
     'about.item2': 'Frontend implementation',
     'about.item3': 'UX thinking and product clarity',
-    'footer.text': 'Available for freelance and product work.'
+    'footer.text': 'Open to new ideas and enquiries.',
+    'form.title': 'Get in touch',
+    'form.name': 'Name',
+    'form.namePlaceholder': 'Your name',
+    'form.email': 'Email',
+    'form.emailPlaceholder': 'you@example.com',
+    'form.message': 'Message',
+    'form.messagePlaceholder': 'What would you like to discuss?',
+    'form.submit': 'Send request',
+    'form.reset': 'Reset',
+    'form.direct': 'Or email directly:'
   }
 };
 
@@ -55,6 +79,20 @@ function updateLanguage(lang) {
     const key = element.getAttribute('data-i18n');
     if (dictionary[key]) {
       element.textContent = dictionary[key];
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach((element) => {
+    const key = element.getAttribute('data-i18n-placeholder');
+    if (dictionary[key]) {
+      element.setAttribute('placeholder', dictionary[key]);
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-aria-label]').forEach((element) => {
+    const key = element.getAttribute('data-i18n-aria-label');
+    if (dictionary[key]) {
+      element.setAttribute('aria-label', dictionary[key]);
     }
   });
 
@@ -83,8 +121,10 @@ if (contactForm) {
     const message = document.getElementById('contactMessage').value.trim();
 
     if (!name || !email || !message) {
-      // simple validation feedback
-      alert('Please fill in name, email and a short message.');
+      const validationMessage = currentLanguage === 'de'
+        ? 'Bitte fülle Name, E-Mail und Nachricht aus.'
+        : 'Please fill in your name, email and message.';
+      alert(validationMessage);
       return;
     }
 

@@ -17,8 +17,8 @@
             <a class="brand" href="#top"><span class="brand-mark">SBS</span><span data-i18n="brand">Schöneberg Systems</span></a>
             <div class="nav-actions">
               <div class="nav-links">
-                <a href="#about" data-i18n="nav.about">About</a>
-                <a href="#contact" data-i18n="nav.contact">Contact</a>
+                <a href="#about" data-i18n="nav.about">Über mich</a>
+                <a href="#contact" data-i18n="nav.contact">Kontakt</a>
               </div>
               <button class="lang-toggle" id="langToggle" type="button" aria-label="Sprache wechseln">DE / EN</button>
             </div>
@@ -29,12 +29,12 @@
         <section class="hero">
           <div class="hero-copy">
             <p class="eyebrow" data-i18n="hero.eyebrow">Frontend &amp; digitales Produktdesign</p>
-            <h1 data-i18n="hero.title">Klare, durchdachte digitale Erlebnisse.</h1>
+            <h1 data-i18n="hero.title">Digitale Erlebnisse mit klarer Linie.</h1>
             <p class="intro" data-i18n="hero.intro">
-              Ich gestalte und baue digitale Produkte mit Fokus auf Klarheit,
-              Benutzerführung und ein sauberes, modernes Erscheinungsbild.
-              Dabei liegt der Schwerpunkt auf verständlicher Kommunikation,
-              gutem UX und einer professionellen, nutzerfreundlichen Umsetzung.
+              Ich entwickle digitale Auftritte und Produkte mit klarer Struktur,
+              guter Nutzerführung und einem zeitgemäßen visuellen Anspruch.
+              Von der ersten Idee bis zur Umsetzung verbinde ich Gestaltung
+              und Technik zu einer stimmigen Lösung.
             </p>
             <div class="cta-row">
               <a class="button primary" href="#about" data-i18n="hero.primaryButton">Ausgewählte Schwerpunkte</a>
@@ -42,7 +42,7 @@
             </div>
           </div>
 
-          <aside class="hero-panel" aria-label="Kurzprofil">
+          <aside class="hero-panel" aria-label="Kurzprofil" data-i18n-aria-label="panel.ariaLabel">
             <div class="mini-label" data-i18n="panel.label">Schwerpunkt</div>
             <p data-i18n="panel.text">Webdesign, App-Entwicklung, Frontend-Umsetzung, digitale Konzepte</p>
             <div class="mini-grid">
@@ -61,14 +61,13 @@
         <section id="about" class="section-block about-block">
           <div class="section-heading">
             <p class="eyebrow" data-i18n="about.eyebrow">Über mich</p>
-            <h2 data-i18n="about.title">Durchdachte Produktarbeit.</h2>
+            <h2 data-i18n="about.title">Design und Technik mit Substanz.</h2>
           </div>
 
           <div class="about-grid">
             <p data-i18n="about.text">
-              Ich kombiniere Design-Sinn mit technischem Verständnis, damit digitale
-              Produkte nicht nur gut aussehen, sondern auch verständlich, schnell und
-              zuverlässig funktionieren.
+              Ich verbinde Designverständnis mit technischem Know-how, damit digitale
+              Lösungen gut aussehen, verständlich bleiben und zuverlässig funktionieren.
             </p>
             <ul>
               <li data-i18n="about.item1">Interface Design</li>
@@ -93,53 +92,56 @@
         </div>
 
         <form id="contactForm" class="contact-form" novalidate>
-          <h3>Contact — Request a project</h3>
+          <h3 data-i18n="form.title">Kontakt aufnehmen</h3>
 
           <label class="field">
-            <span class="field-label">Name</span>
+            <span class="field-label" data-i18n="form.name">Name</span>
             <input
               type="text"
               id="contactName"
               name="name"
-              placeholder="Your name"
+              placeholder="Dein Name"
+              data-i18n-placeholder="form.namePlaceholder"
               required
             >
           </label>
 
           <label class="field">
-            <span class="field-label">Email</span>
+            <span class="field-label" data-i18n="form.email">E-Mail</span>
             <input
               type="email"
               id="contactEmail"
               name="email"
-              placeholder="you@example.com"
+              placeholder="du@beispiel.de"
+              data-i18n-placeholder="form.emailPlaceholder"
               required
             >
           </label>
 
           <label class="field">
-            <span class="field-label">Message</span>
+            <span class="field-label" data-i18n="form.message">Nachricht</span>
             <textarea
               id="contactMessage"
               name="message"
               rows="5"
-              placeholder="Short description of your project"
+              placeholder="Worum geht es?"
+              data-i18n-placeholder="form.messagePlaceholder"
               required
             ></textarea>
           </label>
 
           <div class="form-actions">
             <button type="submit" class="button primary">
-              Send request
+              <span data-i18n="form.submit">Anfrage senden</span>
             </button>
             <button type="reset" class="button secondary">
-              Reset
+              <span data-i18n="form.reset">Zurücksetzen</span>
             </button>
           </div>
 
           <p class="form-note">
-            Or email directly:
-            <a href="mailto:info@xn--schneberg-systems-1zb.de">
+            <span data-i18n="form.direct">Oder direkt per E-Mail:</span>
+            <a href="mailto:info@schöneberg-systems.de">
               info@schöneberg-systems.de
             </a>
           </p>
