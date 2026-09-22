@@ -71,3 +71,28 @@ languageToggle.addEventListener('click', () => {
 });
 
 updateLanguage(currentLanguage);
+
+// Contact form handler (frontend-only, opens mail client via mailto)
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('contactName').value.trim();
+    const email = document.getElementById('contactEmail').value.trim();
+    const message = document.getElementById('contactMessage').value.trim();
+
+    if (!name || !email || !message) {
+      // simple validation feedback
+      alert('Please fill in name, email and a short message.');
+      return;
+    }
+
+    const subject = encodeURIComponent(`Website inquiry from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    const to = 'your@email.com';
+
+    // Open user's mail client
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+  });
+}
