@@ -90,7 +90,7 @@ if (contactForm) {
 
     const subject = encodeURIComponent(`Website inquiry from ${name}`);
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-    const to = 'xn--schneberg-systems-1zb.de';
+    const to = 'info@xn--schneberg-systems-1zb.de';
 
     // Open user's mail client
     window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
