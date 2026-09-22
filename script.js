@@ -2,14 +2,14 @@ const languageToggle = document.getElementById('langToggle');
 
 const translations = {
   de: {
-    brand: 'Your Company',
+    brand: 'Schöneberg Systems',
     'nav.about': 'About',
     'nav.contact': 'Contact',
     'hero.eyebrow': 'Frontend & digitales Produktdesign',
     'hero.title': 'Klare, durchdachte digitale Erlebnisse.',
     'hero.intro': 'Ich gestalte und baue digitale Produkte mit Fokus auf Klarheit, Benutzerführung und ein sauberes, modernes Erscheinungsbild. Dabei liegt der Schwerpunkt auf verständlicher Kommunikation, gutem UX und einer professionellen, nutzerfreundlichen Umsetzung.',
     'hero.primaryButton': 'Mehr erfahren',
-    'hero.secondaryButton': 'Lass uns reden',
+    'hero.secondaryButton': 'Kontakt',
     'panel.label': 'Schwerpunkt',
     'panel.text': 'Webdesign, Frontend-Umsetzung, digitale Konzepte',
     'panel.ui': 'Saubere Schnittstellen',
@@ -23,7 +23,7 @@ const translations = {
     'footer.text': 'Verfügbar für freelance und Produktarbeit.'
   },
   en: {
-    brand: 'Your Company',
+    brand: 'Schöneberg Systems',
     'nav.about': 'About',
     'nav.contact': 'Contact',
     'hero.eyebrow': 'Frontend & digital product design',
